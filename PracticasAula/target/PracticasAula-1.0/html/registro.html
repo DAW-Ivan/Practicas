@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Registro de usuarios</title>
+	<style type="text/css" media="screen">
+	body{padding-left: 15%;padding-top: 5%;}form{width: 50%;}	
+	</style>
+	<script src="../js/index.js" type="text/javascript" charset="utf-8" async defer></script>
+</head>
+<body onload="registro()">
+	<form action="../registro" method="post">
+		<fieldset>
+			<legend>Información personal</legend>
+			<p><label for="Nombre">* Nombre</label>&nbsp;&nbsp;<input type="text" name="Nombre"></p>
+			<p><label for="Apellidos">Apellidos</label>&nbsp;&nbsp;<input type="text" name="Apellidos"></p>
+			<p><label for="Sexo">Sexo</label>&nbsp;&nbsp;<input type="radio" name="Sexo" value="Hombre" id="Hombre" checked="checked"><label for="Hombre">Hombre</label></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="Sexo" id="Mujer" value="Mujer"><label for="Mujer">Mujer</label></p>
+			<p><label for="Nacimiento">Fecha de nacimiento</label>&nbsp;&nbsp;<select name="dia" id="dia"></select>&nbsp;/&nbsp;
+				<select name="mes" id="mes">
+					<option value="Enero">1</option>
+					<option value="Febrero">2</option>
+					<option value="Marzo">3</option>
+					<option value="Abril">4</option>
+					<option value="Mayo">5</option>
+					<option value="Junio">6</option>
+					<option value="Julio">7</option>
+					<option value="Agosto">8</option>
+					<option value="Septiembre">9</option>
+					<option value="Octubre">10</option>
+					<option value="Noviembre">11</option>
+					<option value="Diciembre">12</option>
+				</select>&nbsp;/&nbsp;
+				<select name="año" id="año"></select>
+			</p>
+		</fieldset>
+
+		<fieldset>
+			<legend>Datos de acceso</legend>
+			<p><label for="Usuario">* Usuario</label>&nbsp;&nbsp;<input type="text" name="Usuario"></p>
+			<p><label for="Pass">* Contraseña</label>&nbsp;&nbsp;<input type="password" name="Pass"></p>
+		</fieldset>
+
+		<fieldset>
+			<legend>Información general</legend>
+			<p><label for="Aficiones">Aficiones</label></p>
+			<p><input type="checkbox" name="Deportes" value="Deportes">&nbsp;<label for="Deportes">Deportes</label></p>
+			<p><input type="checkbox" name="Lectura" value="Lectura">&nbsp;<label for="Lectura">Lectura</label></p>
+			<p><input type="checkbox" name="Cine" value="Cine">&nbsp;<label for="Cine">Cine</label></p>
+			<p><input type="checkbox" name="Viajes" value="Viajes">&nbsp;<label for="Viajes">Viajes</label></p>
+		</fieldset>
+		<p><input type="submit" name="enviar" value="Enviar">&nbsp;&nbsp;
+			<input type="reset" name="limpiar" value="Limpiar"></p>
+	</form>
+</body>
+</html>

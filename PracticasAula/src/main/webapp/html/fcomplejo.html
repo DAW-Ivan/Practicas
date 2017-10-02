@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Formulario complejo</title>
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+		body{background: #7DCDFF;color:blue;}
+		label{color:brown;}
+		fieldset{background: lightblue; border-color: blue;}
+	</style>
+</head>
+<body>
+	<h1>FORMULARIO COMPLEJO</h1>
+	<form id="formulario" action="../fcomplejo" method="post">
+		<fieldset>
+			<legend>Datos personales</legend>
+			<p><label for="usuario">Usuario</label>
+				<input type="text" name="usuario"></p>
+			<p><label for="pass">Password</label>
+				<input type="password" name="pass"></p>
+			<p><label for="edad">Edad</label>
+				<select name="edad" id="edad">
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22" selected="selected">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+				</select></p>
+		</fieldset>
+		<fieldset>
+			<legend>Otros datos</legend>
+			<p><label for="estado">Estado civil</label>
+				<input type="radio" name="estado" value="soltero" checked><label for="estado">Soltero/a</label>
+				<input type="radio" name="estado" value="casado"><label for="estado">Casado/a</label>
+				<input type="radio" name="estado" value="viudo"><label for="estado">Viudo/a</label>
+				<input type="radio" name="estado" value="divorciado"><label for="estado">Divorciado/a</label>
+			</p>
+			<p><label for="aficiones">Aficiones (uno o varios, CTRL)</label></p>
+			<p>
+				<select name="aficiones" multiple="multiple" size="6" >
+					<option value="deporte">Deporte</option>
+					<option value="musica">Música</option>
+					<option value="informatica">Informática</option>
+					<option value="viajes" selected="selected">Viajes</option>
+					<option value="tiendas">Tiendas</option>
+					<option value="juegos">Juegos</option>
+				</select>
+			</p>
+			<p><label for="comentarios">Comentarios</label></p>
+			<p><textarea name="comentarios" id="comentarios" cols="40" rows="2" >Pon tu comentario...</textarea></p>
+		</fieldset>
+		<fieldset>
+			<legend>Medios Tecnológicos</legend>
+			<p><label for="internet">Dispones de internet?</label>
+				<input type="radio" value="si" name="internet" checked="checked"><label for="si">Sí</label><input type="radio" name="internet" value="no"><label for="no">No</label></p>
+			<p><label for="so">Sistema operativo (elige uno)</label></p>
+			<p>
+				<select name="so" id="so" size="4">
+					<option value="linux">Linux</option>
+					<option value="windows" selected="selected">Windows</option>
+					<option value="macintosh">Macintosh</option>
+					<option value="solaris">Solaris</option>
+				</select>
+			</p>
+			<p><input type="hidden" name="digito" value="23"></p>
+		</fieldset>
+		<p><input type="submit" name="enviar" value="Enviar">
+			<input type="reset" name="limpiar" value="Limpiar">
+		</p>
+	</form>
+</body>
+</html>
