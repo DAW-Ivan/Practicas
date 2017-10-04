@@ -52,6 +52,7 @@ public class Registro extends HttpServlet {
                     if(ent.equalsIgnoreCase("dia")){dia=Integer.parseInt(e);}
                     if(ent.equalsIgnoreCase("mes")){ 
                         switch(e){
+// NO TIENES EN CUENTA LOS AÑOS BISIESTOS
                             case "Febrero": if(dia>28){ok=false;};
                                 break;
                             case "Abril": if(dia>30){ok=false;};
@@ -78,6 +79,7 @@ public class Registro extends HttpServlet {
                         + "a{text-decoration:none;}");            
                 out.println("</style></head>");
                 out.println("<body><div><h1>Registro satisfactorio</h1>");
+// EXISTE UNA FORMA MEJOR DE VISUALIZAR LOS DIFERENTES CAMPOS. LA QUE APARECE EN EL FICHERO FCOMPLEJO.JAVA
                 for (Map.Entry<String, String[]> entry : datos.entrySet()){
                     for(String e:entry.getValue()){
                         if(!entry.getKey().startsWith("env")){
@@ -121,6 +123,7 @@ public class Registro extends HttpServlet {
                         + "</style>"
                         + "</head><body>"
                         + "<div><p>Errores en el registro</p>"
+// ESTO NO SE PUEDE HACER                        
                         + "<input type='button' value='Volver' onclick='history.back()'>"
                         + "</div>");
                         out.print("</body></html>");

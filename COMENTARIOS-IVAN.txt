@@ -1,0 +1,13 @@
+EJECUCIÓN
+No visualizas los mensajes de error correspondientes.
+Cuando aparecen errores vuelves al html y eso no se puede hacer ya que pasamos del servidor al cliente sin más.
+
+PROYECTO
+Todo correcto
+
+SERVLET
+El paquete donde reside es conveniente que se llame acorde a lo que almacena. (es.albarregas.servlets)
+Tienes algunos comentarios en el código del servlet a modo de retroalimentación
+No comentas el código
+
+CALIFICACIÓN DEL EJERCICIO -> 4.50
