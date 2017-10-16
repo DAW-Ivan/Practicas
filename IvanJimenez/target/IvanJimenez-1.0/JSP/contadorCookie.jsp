@@ -17,19 +17,14 @@
               
                     if(cookie==null){
                         cookie=new Cookie("contador","0");
-                    }else{
-                        if(request.getParameter("eliminar")==null){
-                           int contador=Integer.parseInt(cookie.getValue());
-                            cookie.setValue(Integer.toString(contador+1));
-                            cookie.setMaxAge(24*60*60);
-                            response.addCookie(cookie); 
-                        }else{
-                            cookie.setValue("1");
-                            cookie.setMaxAge(24*60*60);
-                            response.addCookie(cookie);
-                        }
+                    }else if(request.getParameter("eliminar")!=null){
+                            cookie.setValue("0");
+                       }
+                    int contador=Integer.parseInt(cookie.getValue());
+                    cookie.setValue(Integer.toString(contador+1));
+                    cookie.setMaxAge(24*60*60);
+                    response.addCookie(cookie);
                         
-                    }
                     
                 
             %>
@@ -49,10 +44,10 @@
             
         <form action="contadorCookie.jsp" method="post">
                 
-                <h1>Has visitado la página <%=cookie.getValue()%> veces</h1>
                 
                 <%if(cookie.getValue().equals("1")){
                     %>
+                    <h1>Has visitado la página <%=cookie.getValue()%> vez</h1>
                     <p>Información de la cookie</p>
                     <p>Nombre: <%=cookie.getName()%></p>
                     <p>Host: <%=cookie.getDomain()%></p>
@@ -60,7 +55,9 @@
                     <p>Seguridad: <%=cookie.getSecure()%></p>
                     <p>Caducidad: <%=cookie.getMaxAge()%></p>
                     <%
-                }
+                }else{
+                    %><h1>Has visitado la página <%=cookie.getValue()%> veces</h1><%
+}
                 %>
                 <p>
                     <input type="submit" value="Actualizar" name="actualizar" onclick="window.location.reload()">

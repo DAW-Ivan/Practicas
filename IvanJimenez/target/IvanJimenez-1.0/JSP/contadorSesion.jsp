@@ -22,7 +22,7 @@
             Object sesion=session.getAttribute("contador");
             
             if(sesion==null){
-                contador.setContador(0);
+                contador.setContador(1);
                 session.setAttribute("contador", contador.getContador());
             }else{
                 if(request.getParameter("reiniciar")==null){
