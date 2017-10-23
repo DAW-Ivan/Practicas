@@ -16,6 +16,7 @@
     </body>
 </html>
 <%  //Se elimina la sesión y se redirige a login
-    session.invalidate();
+    HttpSession sesion=request.getSession();
+    sesion.invalidate();
     response.sendRedirect("login.jsp");
 %>

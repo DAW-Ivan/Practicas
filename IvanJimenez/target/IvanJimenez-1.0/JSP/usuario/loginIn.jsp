@@ -15,6 +15,7 @@
         sesion.setAttribute("pass", p);
         if(request.getParameter("recordar")!=null){ //Si se ha marcado recordar nombre, crear la cookie
             Cookie cookie=new Cookie("nombre",u);
+            cookie.setMaxAge(60*60*24);
             response.addCookie(cookie);
         }
         response.sendRedirect("menu.jsp");  //Todo correcto redirigir al menú

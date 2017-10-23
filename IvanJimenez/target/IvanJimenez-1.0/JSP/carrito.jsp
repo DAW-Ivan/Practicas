@@ -52,6 +52,7 @@
                         libros.add(libro);
                     
                     }else{
+                        libro=new Libro();
                         libro.setCantidad(cant);
                         libro.setTitulo(tit);
                         libros.add(libro);
