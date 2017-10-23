@@ -8,4 +8,4 @@
 
 16/10/17 - Login de usuario y Carrito de la compra
 
-23/10/17 - Calculadora y Presupuesto JSP
+23/10/17 - Calculadora
