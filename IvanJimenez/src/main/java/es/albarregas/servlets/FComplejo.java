@@ -73,7 +73,8 @@ public class FComplejo extends HttpServlet {
  
             }
         }
-        out.print("<p><a href='index.html'>Men&uacute; inicial</a></p>");
+        out.print("<p><a href='index.html'>Men&uacute; inicial</a>&nbsp;"
+                + "<a href=\"javascript:history.go(-1)\">Volver </a></p>");
         out.println("</div>");
         out.println("</body>");
         out.println("</html>");
