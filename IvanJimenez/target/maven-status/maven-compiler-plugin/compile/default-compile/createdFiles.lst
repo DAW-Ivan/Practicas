@@ -1,6 +1,9 @@
+es\albarregas\tags\RepiteTag.class
 es\albarregas\servlets\Metodos.class
 es\albarregas\servlets\FComplejo.class
 es\albarregas\servlets\CicloVida.class
+es\albarregas\tags\Awesome.class
+es\albarregas\tags\AleDec.class
 es\albarregas\models\Dias.class
 es\albarregas\servlets\HolaMundo.class
 es\albarregas\servlets\Parametros.class
@@ -10,5 +13,6 @@ es\albarregas\models\Contador.class
 es\albarregas\servlets\Errores.class
 es\albarregas\models\Libro.class
 es\albarregas\servlets\Registro.class
+es\albarregas\tags\Ale.class
 es\albarregas\models\Filtro.class
 es\albarregas\servlets\Fechas.class
